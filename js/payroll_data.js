@@ -14,8 +14,13 @@ class EmployeePayrollData{
     set name(name){
         let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
         if(nameRegex.test(name))this._name = name;
-        else throw "Name is Incorrect";
+        else {
+            alert("Invalid name")    
+            throw "Name is Incorrect";
+        }
+    
     }
+
 
     get picture(){return this._picture;}
     set picture(picture){this._picture = picture;}
@@ -30,7 +35,14 @@ class EmployeePayrollData{
     set department(department){this._department = department;}
 
     get startDate(){return this._startDate;}
-    set startDate(startDate){this._startDate = startDate;}
+    set startDate(startDate){
+        if(startDate <= new Date())this._startDate = startDate;
+        else {
+            alert("Invalid Date")    
+            throw "Enter valid date";
+        }
+        
+    }
 
     get note(){return this._note;}
     set note(note){this._note = note;}
