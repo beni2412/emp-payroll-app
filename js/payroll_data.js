@@ -1,23 +1,13 @@
 class EmployeePayrollData{
   
-   constructor(...params){
-        this.name = params[0];
-        this.picture = params[1];
-        this.gender = params[2];
-        this.department = params[3];
-        this.salary = params[4];
-        this.startDate = params[5];
-        this.note = params[6];
-    }
+    get id(){return this._id;}
+    set id(id){this._id = id;}
 
     get name(){return this._name;}
     set name(name){
-        let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
         if(nameRegex.test(name))this._name = name;
-        else {
-            alert("Invalid name")    
-            throw "Name is Incorrect";
-        }
+        else throw "Name is Incorrect";
     
     }
 
@@ -38,7 +28,7 @@ class EmployeePayrollData{
     set startDate(startDate){
         if(startDate <= new Date())this._startDate = startDate;
         else {
-            alert("Invalid Date")    
+               
             throw "Enter valid date";
         }
         
