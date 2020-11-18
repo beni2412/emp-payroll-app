@@ -26,7 +26,8 @@ class EmployeePayrollData{
 
     get startDate(){return this._startDate;}
     set startDate(startDate){
-        if(startDate <= new Date())this._startDate = startDate;
+        if(startDate <= new Date()) 
+        this._startDate = startDate;
         else throw "Enter valid date";
         
     }

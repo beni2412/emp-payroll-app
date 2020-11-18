@@ -44,10 +44,9 @@ const year = document.getElementById("year").value;
 const dateError = document.querySelector(".date-error");
 startDate.addEventListener("input", async function(){
    try{
-     (new EmployeePayrollData()).startDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+     (new EmployeePayrollData()).startDate = new Date(parseInt(year), parseInt(month), parseInt(day));
     dateError.textContent = "";
-    console.log(day, month, year);
-  }catch(e){
+    }catch(e){
     dateError.textContent = "Invalid Date";
   }
 });
