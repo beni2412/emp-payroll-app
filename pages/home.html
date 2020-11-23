@@ -11,7 +11,7 @@
 <body>
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../assets/images/logo.png" alt="">
+            <img src="../assets/images/logo.jpg" width="70px" alt="">
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
                 <span class="emp-text emp-payroll">PAYROLL</span>
@@ -23,7 +23,37 @@
             <div class="emp-detail-text">
                 Employee Details<div class="emp-count">5</div>
             </div>
-            <a href="../pages/employee_payroll_form.html" class="add-button"><img src="../assets/icons/add-24px.svg" alt="">Add User</a>
+            <a href="../pages/payroll_form.html" class="add-button">+ Add User</a>
+        </div>
+        <div class="table-main">
+            <table id="display" class="table">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="profile" alt="" src="../assets/profile-images/profile3.jpg" width="50px">
+                    </td>
+                    <td>Hardaman Singh</td>
+                    <td>Male</td>
+                    <td>
+                        <div class="dept-label">Sales</div>
+                        <div class="dept-label">Finance</div>
+                    </td>
+                    <td>50000</td>
+                    <td>16 Sept 2020</td>
+                    <td>
+                        <img id="1" onclick="remove(this)" alt="delete" src="../assets/images/delete.jpg" width="30px">
+                        <img id="1" alt="edit" onclick="update(this)" src="../assets/images/edit.jpg" width="30px">
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
