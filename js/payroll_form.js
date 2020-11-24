@@ -14,9 +14,10 @@ const save = () => {
    if(employeeList != undefined) employeeList.push(employee);
    else employeeList = [employee];
  
-   alert(employeeList.toString());
+  
    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeeList));
- }
+   alert(employeeList.toString());
+  }
  
  const getSelectedValues = (property) => {
     let allItems = document.querySelectorAll(property);
@@ -40,8 +41,7 @@ const save = () => {
     employee.note = document.getElementById("notes").value;
     employee.startDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
     
-    createAndUpdateStorage(employee);
-    alert("Thank you, your data is saved: " + employee.toString());
+   return employee;
   } 
 
   const setValue = (id, value) => {
