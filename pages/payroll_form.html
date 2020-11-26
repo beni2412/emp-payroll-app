@@ -8,6 +8,7 @@
         <title>Employee payroll form</title>
         <script defer src ="../js/payroll_data.js"></script>
         <script defer src="../js/payroll_form.js"></script>
+        <script defer src="../js/utility.js"></script>
     </head>
     <body>
         <header class="header-content header">
@@ -19,8 +20,8 @@
                 </div>
             </div>
         </header>
-        <div class="form-content">
-            <form class="form" name="emp" action="#" onreset="resetForm()" onsubmit="save()">
+        <div id="formID" class="form-content">
+            <form class="form" name="emp" action="#" onreset="resetForm()" onsubmit="save(event)">
                 <div class="form-head">Employee Payroll Form</div>
                 <div class="row-content">
                     <label class="label text" for="name">Name</label>
